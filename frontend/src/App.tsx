@@ -1,5 +1,6 @@
 import BarChart from "components/BarChart";
 import DataTable from "components/DataTable";
+import DonutChart from "components/DonutChart";
 import NavBar from "components/NavBar";
 import Footer from "components/NavBar/Footer";
 
@@ -17,8 +18,8 @@ function App() {
           </div>
 
           <div className="col-sm-6">
-            <h5 className="text-center text-secondary">Success Rate (%)</h5>
-            <BarChart />
+            <h5 className="text-center text-secondary">All Sales</h5>
+            <DonutChart />
           </div>
         </div>
 
