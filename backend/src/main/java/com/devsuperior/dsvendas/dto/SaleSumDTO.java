@@ -1,6 +1,7 @@
 package com.devsuperior.dsvendas.dto;
 
 import com.devsuperior.dsvendas.entities.Sale;
+import com.devsuperior.dsvendas.entities.Seller;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,21 +16,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class SaleSumDTO implements Serializable {
 
-    private Long id;
-    private Integer visited;
-    private Integer deals;
-    private Double amount;
-    private LocalDate date;
+    private Double sum;
+    private String sellerName;
 
     private  SellerDTO seller;
 
-    public SaleSumDTO(Sale entity){
-        id = entity.getId();
-        visited = entity.getVisited();
-        deals = entity.getDeals();
-        amount = entity.getAmount();
-        date = entity.getDate();
-        seller = new SellerDTO(entity.getSeller());
+    public SaleSumDTO(Seller seller, Double sum){
+        this.sum = sum;
+        sellerName = seller.getName();
 
     }
 }

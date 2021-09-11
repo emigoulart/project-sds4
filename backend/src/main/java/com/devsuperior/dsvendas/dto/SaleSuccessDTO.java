@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class SaleSucessDTO implements Serializable {
+public class SaleSuccessDTO implements Serializable {
 
     private String sellerName;
     private Long deals;
@@ -20,7 +20,7 @@ public class SaleSucessDTO implements Serializable {
 
     private  SellerDTO seller;
 
-    public SaleSucessDTO(Seller seller, Long visited, Long deals){
+    public SaleSuccessDTO(Seller seller, Long visited, Long deals){
         sellerName = seller.getName();
         this.visited = visited;
         this.deals = deals;
